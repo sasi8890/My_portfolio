@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashaank Ammavajjala's Portfolio</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+         
+        <div class="email">shashaankammavajjala@gmail.com</div>
+        <div class="nav-links">
+            <a href="#about">ABOUT</a>
+            <a href="#work">WORK</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Floating Resume Button -->
+    <a href="resume.html" class="floating-resume" title="Resume" target="_blank">
+        <span>RESUME</span><i class="fas fa-file-alt"></i>
+    </a>
+
+    <!-- Sections -->
+    <main>
+        <!-- Canvas for 3D Backgrounds -->
+        <canvas id="bgCanvas"></canvas>
+
+        <!-- Hero -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-left reveal">
+                    <h2 class="greeting">Hello! I'm</h2>
+                    <h1 class="main-title">SHASHAANK<br>AMMAVAJJALA</h1>
+                </div>
+                <div class="hero-right reveal delay-1">
+                    <p class="subtitle">An</p>
+                    <h2 class="sub-title-main">AI ENGINEER<br>FULL-STACK DEVELOPER</h2>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about-section">
+            <div class="container reveal">
+                <div class="about-flex">
+                    <div class="about-text">
+                        <h2 class="section-title right-align">ABOUT ME</h2>
+                        <p class="desc right-align">I am a self-taught AI & Full-Stack Developer. I build intelligent systems, chatbots, and modern web applications that provide real-world value. My passion lies in combining cutting edge models with seamless user experiences.</p>
+                         
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career & Experience -->
+        <section id="experience" class="timeline-section">
+            <div class="container">
+                <h2 class="section-title text-center reveal">MY CAREER & EXPERIENCE</h2>
+                <div class="timeline">
+                    <!-- Line -->
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-background bg-1 reveal">NOW</div>
+                    <div class="timeline-item reveal delay-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content right">
+                            <h3>Learning Something New</h3>
+                            <p>Self-Development. Exploring emerging AI/Deep Learning tech.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-background bg-2 reveal">2025</div>
+                    <div class="timeline-item reveal delay-1 left-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content left">
+                            <h3>AI Engineer</h3>
+                            <p>Freelance & Projects. Developing intelligent AI systems and chatbots.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-background bg-3 reveal">2024</div>
+                    <div class="timeline-item reveal delay-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content right">
+                            <h3>Full-Stack Developer</h3>
+                            <p>Freelance & Projects. Building responsive web apps with React/Node.js.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="techstack" class="tech-section">
+            <canvas id="globeCanvas"></canvas>
+            <div class="container relative z-10">
+                <h2 class="section-title text-center reveal">TOOLS & TECHNOLOGIES</h2>
+                <div class="hex-grid reveal delay-1">
+                    <div class="hex-item"><i class="fab fa-python"></i></div>
+                    <div class="hex-item"><i class="fab fa-js"></i></div>
+                    <div class="hex-item"><i class="fab fa-react"></i></div>
+                    <div class="hex-item"><i class="fab fa-node-js"></i></div>
+                    <div class="hex-item"><i class="fab fa-docker"></i></div>
+                    <div class="hex-item"><i class="fab fa-aws"></i></div>
+                    <div class="hex-item"><i class="fas fa-brain"></i></div>
+                    <div class="hex-item"><i class="fas fa-robot"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Work (Projects) -->
+        <section id="work" class="projects-section">
+            <div class="container">
+                <h2 class="section-title text-center reveal">MY WORK</h2>
+                <div class="project-grid">
+                    <div class="project-card reveal delay-1">
+                        <div class="project-number">01</div>
+                        <h3>ANANTHA LIPI (AI / LLM)</h3>
+                        <p>Manuscript Analysis and Summarization in Telugu and English.</p>
+                        <div class="tags"><span>PyTorch</span><span>React</span></div>
+                    </div>
+                    <div class="project-card reveal delay-2">
+                        <div class="project-number">02</div>
+                        <h3>Attendence portal using OpenCv</h3>
+                        <p>Automated attendance tracking using OpenCV and Python.</p>
+                        <div class="tags"><span>OpenCv</span><span>Python</span></div>
+                    </div>
+                    <div class="project-card reveal delay-1">
+                        <div class="project-number">03</div>
+                        <h3>Data review analysis (IoT)</h3>
+                        <p>By using python and Data visualization techniques.</p>
+                        <div class="tags"><span>Python</span><span>Pandas</span></div>
+                    </div>
+                    <div class="project-card reveal delay-2">
+                        <div class="project-number">04</div>
+                        <h3>SMAE (Full Stack)</h3>
+                        <p>Present working on it.</p>
+                        <div class="tags"><span>React</span><span>Node</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container reveal">
+                <h2 class="section-title">CONTACT</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <p class="location">Chennai, India</p>
+                            <a href="mailto:shashaankammavajjala@gmail.com" class="contact-email">shashaankammavajjala@gmail.com</a>
+                        </div>
+                        <div class="contact-links">
+                            <a href="https://www.linkedin.com/in/shashaank-ammavajjala-b7334232a/" target="_blank" class="contact-link">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/shashaank" target="_blank" class="contact-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://instagram.com/shashaank" target="_blank" class="contact-link">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <footer>Designed and Developed by Shashaank © 2025</footer>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="three-scene.js"></script>
+</body>
+</html>
