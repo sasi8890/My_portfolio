@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     revealOnScroll();
 
     // Smooth scroll for nav links
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
@@ -30,8 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
                     behavior: 'smooth'
                 });
             }
+            const navMenu = document.querySelector('.nav-links');
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
         });
     });
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-links');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    }
 
     // Mock functionality for Play With Me button
     const playBtn = document.getElementById('playBtn');
